@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIR Services Dropdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="assets/css/forms.css" rel="stylesheet">
+    <style>
+        .dropdown-container {
+            max-width: 100%;
+            padding: 10px;
+            position: relative;
+        }
+        .dropdown {
+            width: 100%;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right 10px center;
+            background-size: 16px 16px;
+        }
+        @media (max-width: 768px) {
+            .dropdown-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>Explore your BIR process with CPCPA</h1>
+                <p>Cresencio Sedentario St., San Antonio, Linao, Talisay City, Cebu, 6045 Philippines.</p>
+            </section>
+        </div>
+        <div class="right">
+            <form>
+                <section class="copy">
+                    <h2>Select</h2>
+                </section>
+                
+                <div class="input-container dropdown-container">
+                    <label for="bir-services">Choose BIR Process</label>
+                    <select id="bir-services" class="dropdown" multiple>
+                        <option value="registration-complete">BIR Registration - Complete Registration (COR, Books of Accounts, Authority to Print, and Printing of Invoices)</option>
+                        <option value="registration-atp-only">BIR Registration - Processing of Authority to Print (ATP) only</option>
+                        <option value="registration-atp-service-10">BIR Registration - Processing of Authority to Print (ATP) and Printing of BIR Service Invoice (10 booklets)</option>
+                        <option value="registration-atp-sales-10">BIR Registration - Processing of Authority to Print (ATP) and Printing of BIR Sales Invoice (10 booklets)</option>
+                        <option value="registration-books">BIR Registration - Processing of Books of Accounts only</option>
+                        <option value="registration-atp-service-more">BIR Registration - Processing of Authority to Print (ATP) and Printing of BIR Service Invoice (more than 10 booklets)</option>
+                        <option value="registration-atp-sales-more">BIR Registration - Processing of Authority to Print (ATP) and Printing of BIR Sales Invoice (more than 10 booklets)</option>
+                        <option value="registration-atp-supplementary">BIR Registration - Processing of Authority to Print (ATP) for Supplementary Receipts</option>
+                        <option value="compliance-renew-books">BIR Compliance - Processing of Renewal of Books of Accounts</option>
+                        <option value="compliance-ctc">BIR Compliance - Processing of Certified True Copy (CTC) of COR, FS or AFS, or tax returns or tax receipts</option>
+                        <option value="compliance-dst">BIR Compliance - Updating of Documentary Stamp Taxes and Payment</option>
+                        <option value="compliance-annual-tax">BIR Compliance - Filing of Annual Income Tax and Preparation of Financial Statements (non-audited)</option>
+                        <option value="compliance-interim-tax">BIR Compliance - Filing of Interim Income Tax and Preparation of Financial Statements (non-audited)</option>
+                        <option value="compliance-monthly-tax">BIR Compliance - Tax filing of monthly and quarterly tax returns</option>
+                        <option value="compliance-fs-only">BIR Compliance - Preparation of Financial Statements (non-audited) only</option>
+                        <option value="compliance-lessee">BIR Compliance - Preparation and filing of Lessee Information Sheet (LIS)</option>
+                        <option value="compliance-tax-assessment">BIR Compliance - BIR Tax Assessment and Routing Slip for Open Cases Monitoring</option>
+                        <option value="compliance-tax-mapping">BIR Compliance - Tax Mapping Assistance and Payment of Penalties</option>
+                        <option value="compliance-open-cases">BIR Compliance - Filing of Open Cases and Payment of Penalties only</option>
+                        <option value="compliance-tax-clearance">BIR Compliance - Filing of Tax Clearance for Ongoing Business</option>
+                        <option value="amendment-update-cor">BIR Amendment - Update of COR Information</option>
+                        <option value="amendment-update-tax-types">BIR Amendment - Update of COR Additional Tax Types</option>
+                        <option value="closure-branch">BIR Closure - Cancellation of Business Registration (Branch only)</option>
+                        <option value="closure-main">BIR Closure - Cancellation of Business Registration (Main)</option>
+                        <option value="other-efps">Other BIR Compliance - Registration and Enrollment to BIR EFPS for TAMP Taxpayers</option>
+                        <option value="other-eaccreg">Other BIR Compliance - Registration and Enrollment to BIR EACCREG for POS</option>
+                        <option value="other-capital-gains">Other BIR Compliance - Capital Gains Tax Processing (eCAR)</option>
+                        <option value="other-estate-tax">Other BIR Compliance - Estate Tax Processing (eCAR)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button class="signup-btn" type="submit">Submit</button>
+                <section class="copy legal">
+                    <p><span class="small">By continuing, you agree to accept our 
+                        <br>
+                        <a href="#">Privacy and Policy</a>
+                        &amp;
+                        <a href="#">Terms and Conditions</a>.
+                    </span></p>
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#bir-services').select2({
+                placeholder: "Choose at least one activity",
+                allowClear: true,
+                width: '100%'
+            }).on('select2:select', function (e) {
+                $(this).select2('close');
+            });
+        });
+    </script>
+</body>
+</html>

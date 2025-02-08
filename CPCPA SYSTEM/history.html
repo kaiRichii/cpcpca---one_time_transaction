@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Starter</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main content -->
+  <div class="content" style="padding-top: 20px;">
+    <div class="container-fluid">
+      <div class="row mb-3">
+        <div class="col-12">
+          <button class="btn btn-success" data-toggle="modal" data-target="#addClientModal">Add New Client</button>
+          <button class="btn btn-secondary ml-2">Export</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">List of clients</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0" style="height: 300px;">
+          <table class="table table-head-fixed text-nowrap">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Invoice Number</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Queue Position</th>
+                <th>Payment Status</th>
+                <th>Progress</th>
+                <th>Status</th>
+                <!-- <th>Action</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>INV-001</td>
+                <td>John Doe</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-success">1</span></td>
+                <td><span class="badge bg-success">Paid</span></td>
+                <td>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-primary">55%</span></td>
+                <!-- <td>
+                  <button class="btn btn-primary btn-sm">View</button>
+                  <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#updateModal">Update</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td> -->
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>INV-002</td>
+                <td>Alexander Pierce</td>
+                <td>11-7-2014</td>
+                <td><span class="tag tag-warning">2</span></td>
+                <td><span class="badge bg-warning">Unpaid</span></td>
+                <td>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-warning" style="width: 70%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-warning">70%</span></td>
+                <!-- <td>
+                  <button class="btn btn-primary btn-sm">View</button>
+                  <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#updateModal">Update</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td> -->
+              </tr>
+              <!-- ...existing rows... -->
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content -->
+
+  <!-- Add Client Modal -->
+  <div class="modal fade" id="addClientModal" tabindex="-1" role="dialog" aria-labelledby="addClientModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addClientModalLabel">Add New Client</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form content -->
+          <form>
+            <div class="form-group">
+              <label for="newClientName">Client Name</label>
+              <input type="text" class="form-control" id="newClientName" placeholder="Enter client name">
+            </div>
+            <div class="form-group">
+              <label for="newInvoiceNumber">Invoice Number</label>
+              <input type="text" class="form-control" id="newInvoiceNumber" placeholder="Enter invoice number">
+            </div>
+            <div class="form-group">
+              <label for="newDate">Date</label>
+              <input type="date" class="form-control" id="newDate">
+            </div>
+            <div class="form-group">
+              <label for="newPaymentStatus">Payment Status</label>
+              <select class="form-control" id="newPaymentStatus">
+                <option>Paid</option>
+                <option>Unpaid</option>
+              </select>
+            </div>
+            <!-- Add more fields as needed -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Client</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.modal -->
+
+  <!-- Update Modal -->
+  <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateModalLabel">Update Client</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form content -->
+          <form>
+            <div class="form-group">
+              <label for="clientName">Client Name</label>
+              <input type="text" class="form-control" id="clientName" placeholder="Enter client name">
+            </div>
+            <div class="form-group">
+              <label for="invoiceNumber">Invoice Number</label>
+              <input type="text" class="form-control" id="invoiceNumber" placeholder="Enter invoice number">
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+              <label for="paymentStatus">Payment Status</label>
+              <select class="form-control" id="paymentStatus">
+                <option>Paid</option>
+                <option>Unpaid</option>
+              </select>
+            </div>
+            <!-- Add more fields as needed -->
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.modal -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+</body>
+</html>
+x

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <div class="sidebar">
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/cpcpa logo.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Book Keeping</a>
+        </div>
+      </div>
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+          <li class="nav-item">
+            <a href="financeDashboard.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="finance.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>Client</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-history"></i>
+              <p>History</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-clipboard-list"></i>
+              <p>Audit Log</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper" style="padding: 20px;">
+    <div class="content-header">
+      <div class="container-fluid">
+        <h1 class="m-0">Finance Dashboard</h1>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>200</h3>
+                <p>Total Clients</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>120</h3>
+                <p>Paid Transactions</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>45</h3>
+                <p>In Progress</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-spinner"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>80</h3>
+                <p>Completed</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+            
+      </div>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Client List</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                  
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Client Name</th>
+                        <th>Status</th>
+                        <th>Transaction Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>001</td><td>John Doe</td><td><span class="badge badge-success">Active</span></td><td>2024-01-01</td></tr>
+                      <tr><td>002</td><td>Jane Smith</td><td><span class="badge badge-danger">Inactive</span></td><td>2024-01-05</td></tr>
+                      <tr><td>003</td><td>Michael Lee</td><td><span class="badge badge-success">Active</span></td><td>2024-01-10</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer clearfix">
+                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Add New Client</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Clients</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Transaction History</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                 
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Client</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>2024-01-01</td><td>John Doe</td><td>$1000</td><td><span class="badge badge-success">Completed</span></td></tr>
+                      <tr><td>2024-01-05</td><td>Jane Smith</td><td>$500</td><td><span class="badge badge-warning">In Progress</span></td></tr>
+                      <tr><td>2024-01-10</td><td>Michael Lee</td><td>$750</td><td><span class="badge badge-info">Paid</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer clearfix">
+                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Add New Transaction</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Transactions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Payment Status</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+         
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="chart-responsive">
+                <canvas id="pieChart" height="150"></canvas>
+              </div>
+              <!-- ./chart-responsive -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-4">
+              <ul class="chart-legend clearfix">
+                
+              </ul>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer p-0">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Pending
+                <span class="float-right text-danger">
+                  <i class="fas fa-arrow-down text-sm"></i>
+                  12%</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                Paid
+                <span class="float-right text-success">
+                  <i class="fas fa-arrow-up text-sm"></i> 4%
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                In Progress
+                <span class="float-right text-warning">
+                  <i class="fas fa-arrow-left text-sm"></i> 0%
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.footer -->
+      </div>
+  </div>
+    </div>
+    
+  </div>
+
+
+</div>
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
+
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.    min.js"></script>
+
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="plugins/raphael/raphael.min.js"></script>
+<script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script>
+    $(function () {
+      const ctx = document.getElementById('pieChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Pending', 'Paid', 'In Progress', 'Completed'],
+          datasets: [{
+            data: [20, 50, 15, 15],
+            backgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef'],
+            hoverBackgroundColor: ['#f56954', '#00a65a', '#f39c12', '#00c0ef']
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          legend: {
+            display: true,
+            position: 'right'
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

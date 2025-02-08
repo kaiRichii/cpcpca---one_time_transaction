@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+/* LOADER */
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #1e3a8a 0deg 20.5deg,
+        transparent 22.5deg 45deg,
+        #60a5fa 45deg 67.5deg,
+        transparent 67.5deg 90deg,
+        #1e3a8a 90deg 112.5deg,
+        transparent 112.5deg 135deg,
+        #60a5fa 135deg 157.5deg,
+        transparent 157.5deg 180deg,
+        #1e3a8a 180deg 202.5deg,
+        transparent 202.5deg 225deg,
+        #60a5fa 225deg 247.5deg,
+        transparent 247.5deg 270deg,
+        #1e3a8a 270deg 292.5deg,
+        transparent 292.5deg 315deg,
+        #60a5fa 315deg 337.5deg,
+        transparent 337.5deg 360deg
+    );
+    position: relative;
+    animation: rotate 2.5s linear infinite;
+}
+.loader::before {
+    content: "CPCPA";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+  z-index: 9999; /* Ensure it is above other content */
+}
+.hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+          // PRELOADER
+  
+    window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader-container').classList.add('hidden');
+                document.getElementById('customers_table').classList.remove('hidden');
+            }, 1200000); // 5 seconds delay
+        });
+    </script>
+</body>
+</html>
